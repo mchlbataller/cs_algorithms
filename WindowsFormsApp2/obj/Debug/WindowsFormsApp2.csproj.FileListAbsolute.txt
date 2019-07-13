@@ -1,0 +1,27 @@
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojResolveAssemblyReference.cache
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+c:\storages\hard disk 1\michael\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojResolveAssemblyReference.cache
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+\\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
