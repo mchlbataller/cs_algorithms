@@ -73,7 +73,6 @@ namespace WindowsFormsApp2
         private void button4_Click(object sender, EventArgs e)
         {
             panel1.BringToFront();
-            putang ina mo;
         }
     }
 }
