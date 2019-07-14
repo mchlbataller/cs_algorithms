@@ -44,10 +44,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.trib_Input = new System.Windows.Forms.TextBox();
             this.numberSorting = new System.Windows.Forms.Panel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rt3 = new System.Windows.Forms.RichTextBox();
+            this.rt2 = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rt1 = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.welcomeScreen = new System.Windows.Forms.Panel();
@@ -154,6 +154,21 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.matrixSelector = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.conics = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox97 = new System.Windows.Forms.TextBox();
+            this.proceed = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
+            this.textBox98 = new System.Windows.Forms.TextBox();
+            this.conicsButton = new System.Windows.Forms.Button();
+            this.outputNumber = new System.Windows.Forms.TextBox();
             this.converter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baseSelector)).BeginInit();
             this.tribonacci.SuspendLayout();
@@ -165,6 +180,7 @@
             this.matrix5.SuspendLayout();
             this.matrix4.SuspendLayout();
             this.matrix3.SuspendLayout();
+            this.conics.SuspendLayout();
             this.SuspendLayout();
             // 
             // converter
@@ -322,11 +338,14 @@
             // 
             // numberSorting
             // 
+            this.numberSorting.Controls.Add(this.label11);
+            this.numberSorting.Controls.Add(this.label10);
+            this.numberSorting.Controls.Add(this.label9);
             this.numberSorting.Controls.Add(this.button5);
-            this.numberSorting.Controls.Add(this.richTextBox3);
-            this.numberSorting.Controls.Add(this.richTextBox2);
+            this.numberSorting.Controls.Add(this.rt3);
+            this.numberSorting.Controls.Add(this.rt2);
             this.numberSorting.Controls.Add(this.label7);
-            this.numberSorting.Controls.Add(this.richTextBox1);
+            this.numberSorting.Controls.Add(this.rt1);
             this.numberSorting.Controls.Add(this.label8);
             this.numberSorting.Controls.Add(this.textBox1);
             this.numberSorting.Location = new System.Drawing.Point(0, 0);
@@ -334,21 +353,21 @@
             this.numberSorting.Size = new System.Drawing.Size(598, 377);
             this.numberSorting.TabIndex = 17;
             // 
-            // richTextBox3
+            // rt3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(403, 120);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(192, 188);
-            this.richTextBox3.TabIndex = 6;
-            this.richTextBox3.Text = "";
+            this.rt3.Location = new System.Drawing.Point(403, 120);
+            this.rt3.Name = "rt3";
+            this.rt3.Size = new System.Drawing.Size(192, 188);
+            this.rt3.TabIndex = 6;
+            this.rt3.Text = "";
             // 
-            // richTextBox2
+            // rt2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(207, 120);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(192, 188);
-            this.richTextBox2.TabIndex = 5;
-            this.richTextBox2.Text = "";
+            this.rt2.Location = new System.Drawing.Point(207, 120);
+            this.rt2.Name = "rt2";
+            this.rt2.Size = new System.Drawing.Size(192, 188);
+            this.rt2.TabIndex = 5;
+            this.rt2.Text = "";
             // 
             // label7
             // 
@@ -359,13 +378,13 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Number Sorting [Incomplete]";
             // 
-            // richTextBox1
+            // rt1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 120);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(192, 188);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.rt1.Location = new System.Drawing.Point(12, 120);
+            this.rt1.Name = "rt1";
+            this.rt1.Size = new System.Drawing.Size(192, 188);
+            this.rt1.TabIndex = 3;
+            this.rt1.Text = "";
             // 
             // label8
             // 
@@ -388,13 +407,14 @@
             // 
             // welcomeScreen
             // 
+            this.welcomeScreen.Controls.Add(this.conicsButton);
             this.welcomeScreen.Controls.Add(this.debug);
             this.welcomeScreen.Controls.Add(this.button4);
             this.welcomeScreen.Controls.Add(this.button3);
             this.welcomeScreen.Controls.Add(this.button2);
             this.welcomeScreen.Location = new System.Drawing.Point(0, 0);
             this.welcomeScreen.Name = "welcomeScreen";
-            this.welcomeScreen.Size = new System.Drawing.Size(598, 331);
+            this.welcomeScreen.Size = new System.Drawing.Size(598, 377);
             this.welcomeScreen.TabIndex = 18;
             // 
             // debug
@@ -409,7 +429,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(172, 186);
+            this.button4.Location = new System.Drawing.Point(172, 171);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(244, 23);
             this.button4.TabIndex = 2;
@@ -1248,16 +1268,153 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(80, 104);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Bubble Sort";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(278, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Insertion Sort";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(474, 104);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Quick Sort";
+            // 
+            // conics
+            // 
+            this.conics.Controls.Add(this.outputNumber);
+            this.conics.Controls.Add(this.textBox98);
+            this.conics.Controls.Add(this.clear);
+            this.conics.Controls.Add(this.proceed);
+            this.conics.Controls.Add(this.textBox17);
+            this.conics.Controls.Add(this.textBox97);
+            this.conics.Controls.Add(this.textBox14);
+            this.conics.Controls.Add(this.textBox13);
+            this.conics.Controls.Add(this.textBox12);
+            this.conics.Controls.Add(this.textBox11);
+            this.conics.Location = new System.Drawing.Point(0, 0);
+            this.conics.Name = "conics";
+            this.conics.Size = new System.Drawing.Size(598, 377);
+            this.conics.TabIndex = 19;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(51, 88);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(80, 20);
+            this.textBox11.TabIndex = 0;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(137, 88);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(80, 20);
+            this.textBox12.TabIndex = 1;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(223, 88);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(80, 20);
+            this.textBox13.TabIndex = 2;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(309, 88);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(80, 20);
+            this.textBox14.TabIndex = 3;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(481, 88);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(80, 20);
+            this.textBox17.TabIndex = 5;
+            // 
+            // textBox97
+            // 
+            this.textBox97.Location = new System.Drawing.Point(395, 88);
+            this.textBox97.Name = "textBox97";
+            this.textBox97.Size = new System.Drawing.Size(80, 20);
+            this.textBox97.TabIndex = 4;
+            // 
+            // proceed
+            // 
+            this.proceed.Location = new System.Drawing.Point(171, 130);
+            this.proceed.Name = "proceed";
+            this.proceed.Size = new System.Drawing.Size(75, 23);
+            this.proceed.TabIndex = 6;
+            this.proceed.Text = "Submit";
+            this.proceed.UseVisualStyleBackColor = true;
+            this.proceed.Click += new System.EventHandler(this.proceed_Click);
+            // 
+            // clear
+            // 
+            this.clear.Location = new System.Drawing.Point(374, 131);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(75, 23);
+            this.clear.TabIndex = 7;
+            this.clear.Text = "Clear";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
+            // 
+            // textBox98
+            // 
+            this.textBox98.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox98.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox98.Location = new System.Drawing.Point(60, 62);
+            this.textBox98.Name = "textBox98";
+            this.textBox98.ReadOnly = true;
+            this.textBox98.Size = new System.Drawing.Size(490, 13);
+            this.textBox98.TabIndex = 8;
+            this.textBox98.Text = "Ax^2 + Bxy +Cy^2 + Dx + Ey + F = 0";
+            this.textBox98.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // conicsButton
+            // 
+            this.conicsButton.Location = new System.Drawing.Point(172, 227);
+            this.conicsButton.Name = "conicsButton";
+            this.conicsButton.Size = new System.Drawing.Size(244, 23);
+            this.conicsButton.TabIndex = 4;
+            this.conicsButton.Text = "Conic Sections";
+            this.conicsButton.UseVisualStyleBackColor = true;
+            this.conicsButton.Click += new System.EventHandler(this.conicsButton_Click);
+            // 
+            // outputNumber
+            // 
+            this.outputNumber.Location = new System.Drawing.Point(53, 184);
+            this.outputNumber.Multiline = true;
+            this.outputNumber.Name = "outputNumber";
+            this.outputNumber.Size = new System.Drawing.Size(508, 176);
+            this.outputNumber.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 379);
+            this.Controls.Add(this.conics);
+            this.Controls.Add(this.welcomeScreen);
             this.Controls.Add(this.numberSorting);
             this.Controls.Add(this.tribonacci);
             this.Controls.Add(this.converter);
             this.Controls.Add(this.determinants);
-            this.Controls.Add(this.welcomeScreen);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1280,6 +1437,8 @@
             this.matrix4.PerformLayout();
             this.matrix3.ResumeLayout(false);
             this.matrix3.PerformLayout();
+            this.conics.ResumeLayout(false);
+            this.conics.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1302,10 +1461,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel numberSorting;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rt3;
+        private System.Windows.Forms.RichTextBox rt2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rt1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel welcomeScreen;
@@ -1412,6 +1571,21 @@
         private System.Windows.Forms.TextBox textBox96;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel conics;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBox97;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button proceed;
+        private System.Windows.Forms.TextBox textBox98;
+        private System.Windows.Forms.Button conicsButton;
+        private System.Windows.Forms.TextBox outputNumber;
     }
 }
 
