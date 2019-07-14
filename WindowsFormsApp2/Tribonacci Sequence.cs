@@ -9,7 +9,7 @@ namespace WindowsFormsApp2
 	class Tribonacci_Sequence
 	{
 		// A tribonacci sequence starts at 0 and proceeds to 1.
-		private int n0 = 0;     // Encapsulation so that other classes can only access the method
+		private int n0 = 0;    
 		private int n1 = 1;
 		private int n2 = 1;
 		private int temp;
@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
 
         public void Start(RichTextBox r, int i, int userInput)
 		{
-			for (;n2 < userInput;)      // Stop the loop if the any of the variables exceed the input by user
+			for (;n2 < userInput;)      // Stop the loop if the any of the variables exceed the num input by user
 			{
 				if (i == 1)
 				{
