@@ -72,7 +72,20 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            panel1.BringToFront();
+            numberSorting.BringToFront();
+        }
+
+        private void debug_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void matrixSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(matrixSelector.Text)
+            {
+                case "2": matrix2.Visible = true; break;
+            }
         }
     }
 }

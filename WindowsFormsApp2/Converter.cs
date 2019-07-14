@@ -39,15 +39,7 @@ namespace WindowsFormsApp2
 				numOutput.AppendText("Your output is invalid. Please try again.\n\n");
 				return;     // return was used to terminate
 			}
-
-			if (bas == 1)
-			{
-				numOutput.AppendText("0");
-				return;
-			}
-
-
-
+            
 			//	If binary...
 			if (bas == 2)
 			{
@@ -58,8 +50,8 @@ namespace WindowsFormsApp2
 				else       // if dec is negative....
 				{
 					numOutput.AppendText("1");
-					dec = dec - dec - dec;  // to get the positive equivalent (although Math.Abs could be applied here)
-				};
+					dec = Math.Abs(dec);
+                };
 			};
 
 			if (dec < 0 && bas > 0)
