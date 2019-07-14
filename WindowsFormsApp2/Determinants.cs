@@ -9,21 +9,21 @@ namespace WindowsFormsApp2
 {
     class Determinants
     {
-        private int matrix;
-        private int det;
-        public int[,] Matrix { get; set; }
-        public int[,] Matrix2 { get; set; }
+        //private int matrix;
+        //private int det;
+        //public int[,] Matrix { get; set; }
+        //public int[,] Matrix2 { get; set; }
         
         
-        public Determinants(int dim)
-        {
-            Matrix = new int[dim, dim];
-        }
+        //public Determinants(int dim)
+        //{
+        //    Matrix = new int[dim, dim];
+        //}
 
-        public void Start2()
-        {
+        //public void Start2()
+        //{
             
-        }
+        //}
         
 
         /*
@@ -42,10 +42,10 @@ namespace WindowsFormsApp2
         */
 
 
-        public void Start6()
-        {
+        //public void Start6()
+        //{
             
-        }
+        //}
         
     }
 }
