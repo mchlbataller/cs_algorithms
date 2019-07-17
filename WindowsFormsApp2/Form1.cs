@@ -208,5 +208,37 @@ namespace WindowsFormsApp2
 
             NewtonRaphson.Start(output, num, rad);
         }
+        private int counter = 1;
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Gauss g = new Gauss();
+            g.Start(outputValues, textBoxA1, textBoxB1, textBoxC1, textBoxD1, textBoxE1, textBoxF1,
+                textBoxA2, textBoxB2, textBoxC2, textBoxD2, textBoxE2, textBoxF2,
+                textBoxA3, textBoxB3, textBoxC3, textBoxD3, textBoxE3, textBoxF3,
+                a4, b4, c4, d4, e4, f4,
+                a5, b5, c5, d5, e5, f5, counter);
+            counter++;
+        }
+
+        private void clearValues_Click(object sender, EventArgs e)
+        {
+            textBoxA1.Clear();
+            textBoxB1.Clear();
+            textBoxC1.Clear();
+            textBoxD1.Clear();
+            textBoxE1.Clear();
+            textBoxF1.Clear();
+            counter = 1;
+        }
+
+        private void textBox118_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gaussPanel_Click(object sender, EventArgs e)
+        {
+            gauss.BringToFront();
+        }
     }
 }

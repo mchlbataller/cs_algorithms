@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
+
 namespace WindowsFormsApp2
 {
     class Sortings
@@ -103,7 +104,9 @@ namespace WindowsFormsApp2
             }
         }
 
-        public static void exchange(int[] data, int m, int n)
+
+        // method for swapping
+        private static void swapNumbers(int[] data, int m, int n)
         {
             int temporary;
 
@@ -120,7 +123,7 @@ namespace WindowsFormsApp2
             i = l;
             j = r;
 
-            x = data[(l + r) / 2]; /* find pivot item */
+            x = data[(l + r) / 2];      // Find the pivot number
             while (true)
             {
                 while (data[i] < x)
@@ -129,7 +132,7 @@ namespace WindowsFormsApp2
                     j--;
                 if (i <= j)
                 {
-                    exchange(data, i, j);
+                    swapNumbers(data, i, j);
 
                     i++;
                     j--;
@@ -142,81 +145,5 @@ namespace WindowsFormsApp2
             if (i < r)
                 QuickSort(data, i, r);
         }
-
-        //static public void quickSort(int[] arr, int left, int right)
-        //{
-        //    int pivot;
-        //    if (left < right)
-        //    {
-        //        pivot = Partition(arr, left, right);
-        //        if (pivot > 1)
-        //        {
-        //            quickSort(arr, left, pivot - 1);
-        //        }
-        //        if (pivot + 1 < right)
-        //        {
-        //            quickSort(arr, pivot + 1, right);
-        //        }
-        //    }
-        //}
-        //public void Start()
-        //{
-        //    int[] arr = { 67, 12, 95, 56, 85, 1, 100, 23, 60, 9 };
-        //    int[] numbers4 = new int[25] { 5, 2, 3, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        //    int n = 10, i;
-        //    Debug.WriteLine("Quick Sort");
-        //    Debug.Write("Initial array is: ");
-        //    for (i = 0; i < n; i++)
-        //    {
-        //        Debug.Write(arr[i] + " ");
-        //    }
-        //    quickSort(arr, 0, 9);
-        //    Debug.Write("\nSorted Array is: ");
-        //    for (i = 0; i < n; i++)
-        //    {
-        //        Debug.Write(arr[i] + " ");
-        //    }
-
-        //}
-
-
-        //    public void SortArray(int[] numbers)
-        //    {
-        //        Quicksort(numbers, 0, numbers.Length - 1);
-        //    }
-
-        //    private static void Quicksort(int[] numbers, int left, int right)
-        //    {
-        //        int i = left;
-        //        int j = right;
-
-        //        var pivot = numbers[(left + right) / 2];
-
-        //        while (i <= j)
-        //        {
-        //            while (numbers[i] < pivot)
-        //                i++;
-
-        //            while (numbers[j] > pivot)
-        //                j--;
-
-        //            if (i <= j)
-        //            {
-        //                var tmp = numbers[1];
-        //                numbers[i] = numbers[j];
-        //                numbers[j] = tmp;
-
-        //                i++;
-        //                j--;
-        //            }
-        //        }
-
-        //        if (left < j)
-        //            Quicksort(numbers, left, i);
-
-        //        if (i < right)
-        //            Quicksort(numbers, i, right);
-        //    }
-        //}
     }
 }

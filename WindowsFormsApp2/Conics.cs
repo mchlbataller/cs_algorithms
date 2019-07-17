@@ -10,16 +10,6 @@ namespace WindowsFormsApp2
     class Conics : Form1
     {
         public int a, b, c, d, f, g, bSquare, discriminant;
-        //public int a { get; set; }
-        //public int b { get; set; }
-        //public int c { get; set; }
-        //public int d { get; set; }
-        //public int f { get; set; }
-        //public int g { get; set; }
-        //public int bSquare { get; set; }
-        //public int discriminant { get; set; }
-
-
 
         // nested methods for conic outputs
         public void circleOutput()
@@ -62,7 +52,6 @@ namespace WindowsFormsApp2
                 downWard = "downwards";
                 MessageBox.Show($"The conic section is Vertical Parabola\nThe focus is {focus}. \n Vertex at ({h}, {k}) opening {downWard}");
             }
-
         }
 
         public void parabolaHorizontalOutput()

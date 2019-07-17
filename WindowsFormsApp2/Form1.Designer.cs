@@ -180,6 +180,44 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.gauss = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.outputValues = new System.Windows.Forms.RichTextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox101 = new System.Windows.Forms.TextBox();
+            this.textBoxF1 = new System.Windows.Forms.TextBox();
+            this.textBoxE1 = new System.Windows.Forms.TextBox();
+            this.textBoxD1 = new System.Windows.Forms.TextBox();
+            this.textBoxC1 = new System.Windows.Forms.TextBox();
+            this.textBoxB1 = new System.Windows.Forms.TextBox();
+            this.textBoxA1 = new System.Windows.Forms.TextBox();
+            this.clearValues = new System.Windows.Forms.Button();
+            this.textBoxA2 = new System.Windows.Forms.TextBox();
+            this.textBoxB2 = new System.Windows.Forms.TextBox();
+            this.textBoxC2 = new System.Windows.Forms.TextBox();
+            this.textBoxD2 = new System.Windows.Forms.TextBox();
+            this.textBoxE2 = new System.Windows.Forms.TextBox();
+            this.textBoxF2 = new System.Windows.Forms.TextBox();
+            this.textBoxA3 = new System.Windows.Forms.TextBox();
+            this.textBoxB3 = new System.Windows.Forms.TextBox();
+            this.textBoxC3 = new System.Windows.Forms.TextBox();
+            this.textBoxD3 = new System.Windows.Forms.TextBox();
+            this.textBoxE3 = new System.Windows.Forms.TextBox();
+            this.textBoxF3 = new System.Windows.Forms.TextBox();
+            this.a4 = new System.Windows.Forms.TextBox();
+            this.b4 = new System.Windows.Forms.TextBox();
+            this.a5 = new System.Windows.Forms.TextBox();
+            this.b5 = new System.Windows.Forms.TextBox();
+            this.c4 = new System.Windows.Forms.TextBox();
+            this.c5 = new System.Windows.Forms.TextBox();
+            this.d4 = new System.Windows.Forms.TextBox();
+            this.d5 = new System.Windows.Forms.TextBox();
+            this.e4 = new System.Windows.Forms.TextBox();
+            this.e5 = new System.Windows.Forms.TextBox();
+            this.f4 = new System.Windows.Forms.TextBox();
+            this.f5 = new System.Windows.Forms.TextBox();
+            this.gaussPanel = new System.Windows.Forms.Button();
             this.converter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baseSelector)).BeginInit();
             this.tribonacci.SuspendLayout();
@@ -194,6 +232,7 @@
             this.conics.SuspendLayout();
             this.newton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radix)).BeginInit();
+            this.gauss.SuspendLayout();
             this.SuspendLayout();
             // 
             // converter
@@ -460,6 +499,7 @@
             this.welcomeScreen.BackColor = System.Drawing.Color.CadetBlue;
             this.welcomeScreen.Controls.Add(this.label17);
             this.welcomeScreen.Controls.Add(this.label16);
+            this.welcomeScreen.Controls.Add(this.gaussPanel);
             this.welcomeScreen.Controls.Add(this.newtonPanel);
             this.welcomeScreen.Controls.Add(this.conicsButton);
             this.welcomeScreen.Controls.Add(this.debug);
@@ -473,7 +513,7 @@
             // 
             // conicsButton
             // 
-            this.conicsButton.Location = new System.Drawing.Point(172, 245);
+            this.conicsButton.Location = new System.Drawing.Point(309, 137);
             this.conicsButton.Name = "conicsButton";
             this.conicsButton.Size = new System.Drawing.Size(244, 23);
             this.conicsButton.TabIndex = 4;
@@ -493,7 +533,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(172, 204);
+            this.button4.Location = new System.Drawing.Point(50, 221);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(244, 23);
             this.button4.TabIndex = 2;
@@ -503,7 +543,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(172, 161);
+            this.button3.Location = new System.Drawing.Point(50, 178);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(244, 23);
             this.button3.TabIndex = 1;
@@ -513,7 +553,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(172, 120);
+            this.button2.Location = new System.Drawing.Point(50, 137);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 23);
             this.button2.TabIndex = 0;
@@ -1419,7 +1459,7 @@
             // 
             // newtonPanel
             // 
-            this.newtonPanel.Location = new System.Drawing.Point(172, 284);
+            this.newtonPanel.Location = new System.Drawing.Point(309, 178);
             this.newtonPanel.Name = "newtonPanel";
             this.newtonPanel.Size = new System.Drawing.Size(244, 23);
             this.newtonPanel.TabIndex = 4;
@@ -1542,14 +1582,338 @@
             this.label17.TabIndex = 5;
             this.label17.Text = "Please select the sub-program you want to execute.";
             // 
+            // gauss
+            // 
+            this.gauss.Controls.Add(this.f5);
+            this.gauss.Controls.Add(this.textBoxF3);
+            this.gauss.Controls.Add(this.f4);
+            this.gauss.Controls.Add(this.textBoxF2);
+            this.gauss.Controls.Add(this.textBoxF1);
+            this.gauss.Controls.Add(this.e5);
+            this.gauss.Controls.Add(this.textBoxE3);
+            this.gauss.Controls.Add(this.e4);
+            this.gauss.Controls.Add(this.textBoxE2);
+            this.gauss.Controls.Add(this.textBoxE1);
+            this.gauss.Controls.Add(this.d5);
+            this.gauss.Controls.Add(this.textBoxD3);
+            this.gauss.Controls.Add(this.d4);
+            this.gauss.Controls.Add(this.textBoxD2);
+            this.gauss.Controls.Add(this.textBoxD1);
+            this.gauss.Controls.Add(this.c5);
+            this.gauss.Controls.Add(this.textBoxC3);
+            this.gauss.Controls.Add(this.c4);
+            this.gauss.Controls.Add(this.textBoxC2);
+            this.gauss.Controls.Add(this.textBoxC1);
+            this.gauss.Controls.Add(this.b5);
+            this.gauss.Controls.Add(this.textBoxB3);
+            this.gauss.Controls.Add(this.a5);
+            this.gauss.Controls.Add(this.textBoxA3);
+            this.gauss.Controls.Add(this.b4);
+            this.gauss.Controls.Add(this.textBoxB2);
+            this.gauss.Controls.Add(this.a4);
+            this.gauss.Controls.Add(this.textBoxA2);
+            this.gauss.Controls.Add(this.textBoxB1);
+            this.gauss.Controls.Add(this.textBoxA1);
+            this.gauss.Controls.Add(this.textBox101);
+            this.gauss.Controls.Add(this.clearValues);
+            this.gauss.Controls.Add(this.button6);
+            this.gauss.Controls.Add(this.outputValues);
+            this.gauss.Controls.Add(this.label18);
+            this.gauss.Controls.Add(this.label20);
+            this.gauss.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.gauss.Location = new System.Drawing.Point(1, 0);
+            this.gauss.Name = "gauss";
+            this.gauss.Size = new System.Drawing.Size(598, 380);
+            this.gauss.TabIndex = 20;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(244, 29);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(69, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Gauss Seidel";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(53, 243);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 13);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Program Output:";
+            // 
+            // outputValues
+            // 
+            this.outputValues.Location = new System.Drawing.Point(56, 267);
+            this.outputValues.Name = "outputValues";
+            this.outputValues.Size = new System.Drawing.Size(474, 96);
+            this.outputValues.TabIndex = 3;
+            this.outputValues.Text = "";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(202, 223);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Submit";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox101
+            // 
+            this.textBox101.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox101.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox101.Location = new System.Drawing.Point(41, 62);
+            this.textBox101.Name = "textBox101";
+            this.textBox101.ReadOnly = true;
+            this.textBox101.Size = new System.Drawing.Size(490, 13);
+            this.textBox101.TabIndex = 11;
+            this.textBox101.Text = "General Formula: Ax^2 + Bxy +Cy^2 + Dx + Ey + F = 0";
+            this.textBox101.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxF1
+            // 
+            this.textBoxF1.Location = new System.Drawing.Point(474, 87);
+            this.textBoxF1.Name = "textBoxF1";
+            this.textBoxF1.Size = new System.Drawing.Size(80, 20);
+            this.textBoxF1.TabIndex = 6;
+            // 
+            // textBoxE1
+            // 
+            this.textBoxE1.Location = new System.Drawing.Point(385, 87);
+            this.textBoxE1.Name = "textBoxE1";
+            this.textBoxE1.Size = new System.Drawing.Size(80, 20);
+            this.textBoxE1.TabIndex = 5;
+            // 
+            // textBoxD1
+            // 
+            this.textBoxD1.Location = new System.Drawing.Point(299, 87);
+            this.textBoxD1.Name = "textBoxD1";
+            this.textBoxD1.Size = new System.Drawing.Size(80, 20);
+            this.textBoxD1.TabIndex = 4;
+            // 
+            // textBoxC1
+            // 
+            this.textBoxC1.Location = new System.Drawing.Point(213, 87);
+            this.textBoxC1.Name = "textBoxC1";
+            this.textBoxC1.Size = new System.Drawing.Size(80, 20);
+            this.textBoxC1.TabIndex = 3;
+            // 
+            // textBoxB1
+            // 
+            this.textBoxB1.Location = new System.Drawing.Point(127, 87);
+            this.textBoxB1.Name = "textBoxB1";
+            this.textBoxB1.Size = new System.Drawing.Size(80, 20);
+            this.textBoxB1.TabIndex = 2;
+            // 
+            // textBoxA1
+            // 
+            this.textBoxA1.Location = new System.Drawing.Point(41, 87);
+            this.textBoxA1.Name = "textBoxA1";
+            this.textBoxA1.Size = new System.Drawing.Size(80, 20);
+            this.textBoxA1.TabIndex = 1;
+            // 
+            // clearValues
+            // 
+            this.clearValues.Location = new System.Drawing.Point(309, 223);
+            this.clearValues.Name = "clearValues";
+            this.clearValues.Size = new System.Drawing.Size(75, 23);
+            this.clearValues.TabIndex = 4;
+            this.clearValues.Text = "Clear";
+            this.clearValues.UseVisualStyleBackColor = true;
+            this.clearValues.Click += new System.EventHandler(this.clearValues_Click);
+            // 
+            // textBoxA2
+            // 
+            this.textBoxA2.Location = new System.Drawing.Point(41, 114);
+            this.textBoxA2.Name = "textBoxA2";
+            this.textBoxA2.Size = new System.Drawing.Size(80, 20);
+            this.textBoxA2.TabIndex = 7;
+            // 
+            // textBoxB2
+            // 
+            this.textBoxB2.Location = new System.Drawing.Point(127, 114);
+            this.textBoxB2.Name = "textBoxB2";
+            this.textBoxB2.Size = new System.Drawing.Size(80, 20);
+            this.textBoxB2.TabIndex = 8;
+            // 
+            // textBoxC2
+            // 
+            this.textBoxC2.Location = new System.Drawing.Point(213, 114);
+            this.textBoxC2.Name = "textBoxC2";
+            this.textBoxC2.Size = new System.Drawing.Size(80, 20);
+            this.textBoxC2.TabIndex = 9;
+            // 
+            // textBoxD2
+            // 
+            this.textBoxD2.Location = new System.Drawing.Point(299, 114);
+            this.textBoxD2.Name = "textBoxD2";
+            this.textBoxD2.Size = new System.Drawing.Size(80, 20);
+            this.textBoxD2.TabIndex = 10;
+            // 
+            // textBoxE2
+            // 
+            this.textBoxE2.Location = new System.Drawing.Point(385, 114);
+            this.textBoxE2.Name = "textBoxE2";
+            this.textBoxE2.Size = new System.Drawing.Size(80, 20);
+            this.textBoxE2.TabIndex = 11;
+            // 
+            // textBoxF2
+            // 
+            this.textBoxF2.Location = new System.Drawing.Point(474, 114);
+            this.textBoxF2.Name = "textBoxF2";
+            this.textBoxF2.Size = new System.Drawing.Size(80, 20);
+            this.textBoxF2.TabIndex = 12;
+            // 
+            // textBoxA3
+            // 
+            this.textBoxA3.Location = new System.Drawing.Point(41, 140);
+            this.textBoxA3.Name = "textBoxA3";
+            this.textBoxA3.Size = new System.Drawing.Size(80, 20);
+            this.textBoxA3.TabIndex = 13;
+            // 
+            // textBoxB3
+            // 
+            this.textBoxB3.Location = new System.Drawing.Point(127, 140);
+            this.textBoxB3.Name = "textBoxB3";
+            this.textBoxB3.Size = new System.Drawing.Size(80, 20);
+            this.textBoxB3.TabIndex = 14;
+            // 
+            // textBoxC3
+            // 
+            this.textBoxC3.Location = new System.Drawing.Point(213, 140);
+            this.textBoxC3.Name = "textBoxC3";
+            this.textBoxC3.Size = new System.Drawing.Size(80, 20);
+            this.textBoxC3.TabIndex = 15;
+            // 
+            // textBoxD3
+            // 
+            this.textBoxD3.Location = new System.Drawing.Point(299, 140);
+            this.textBoxD3.Name = "textBoxD3";
+            this.textBoxD3.Size = new System.Drawing.Size(80, 20);
+            this.textBoxD3.TabIndex = 16;
+            // 
+            // textBoxE3
+            // 
+            this.textBoxE3.Location = new System.Drawing.Point(385, 140);
+            this.textBoxE3.Name = "textBoxE3";
+            this.textBoxE3.Size = new System.Drawing.Size(80, 20);
+            this.textBoxE3.TabIndex = 17;
+            // 
+            // textBoxF3
+            // 
+            this.textBoxF3.Location = new System.Drawing.Point(474, 140);
+            this.textBoxF3.Name = "textBoxF3";
+            this.textBoxF3.Size = new System.Drawing.Size(80, 20);
+            this.textBoxF3.TabIndex = 18;
+            // 
+            // a4
+            // 
+            this.a4.Location = new System.Drawing.Point(41, 166);
+            this.a4.Name = "a4";
+            this.a4.Size = new System.Drawing.Size(80, 20);
+            this.a4.TabIndex = 19;
+            // 
+            // b4
+            // 
+            this.b4.Location = new System.Drawing.Point(127, 166);
+            this.b4.Name = "b4";
+            this.b4.Size = new System.Drawing.Size(80, 20);
+            this.b4.TabIndex = 20;
+            // 
+            // a5
+            // 
+            this.a5.Location = new System.Drawing.Point(41, 192);
+            this.a5.Name = "a5";
+            this.a5.Size = new System.Drawing.Size(80, 20);
+            this.a5.TabIndex = 25;
+            // 
+            // b5
+            // 
+            this.b5.Location = new System.Drawing.Point(127, 192);
+            this.b5.Name = "b5";
+            this.b5.Size = new System.Drawing.Size(80, 20);
+            this.b5.TabIndex = 26;
+            // 
+            // c4
+            // 
+            this.c4.Location = new System.Drawing.Point(213, 166);
+            this.c4.Name = "c4";
+            this.c4.Size = new System.Drawing.Size(80, 20);
+            this.c4.TabIndex = 21;
+            // 
+            // c5
+            // 
+            this.c5.Location = new System.Drawing.Point(213, 192);
+            this.c5.Name = "c5";
+            this.c5.Size = new System.Drawing.Size(80, 20);
+            this.c5.TabIndex = 27;
+            // 
+            // d4
+            // 
+            this.d4.Location = new System.Drawing.Point(299, 166);
+            this.d4.Name = "d4";
+            this.d4.Size = new System.Drawing.Size(80, 20);
+            this.d4.TabIndex = 22;
+            this.d4.TextChanged += new System.EventHandler(this.textBox118_TextChanged);
+            // 
+            // d5
+            // 
+            this.d5.Location = new System.Drawing.Point(299, 192);
+            this.d5.Name = "d5";
+            this.d5.Size = new System.Drawing.Size(80, 20);
+            this.d5.TabIndex = 28;
+            // 
+            // e4
+            // 
+            this.e4.Location = new System.Drawing.Point(385, 166);
+            this.e4.Name = "e4";
+            this.e4.Size = new System.Drawing.Size(80, 20);
+            this.e4.TabIndex = 23;
+            // 
+            // e5
+            // 
+            this.e5.Location = new System.Drawing.Point(385, 192);
+            this.e5.Name = "e5";
+            this.e5.Size = new System.Drawing.Size(80, 20);
+            this.e5.TabIndex = 29;
+            // 
+            // f4
+            // 
+            this.f4.Location = new System.Drawing.Point(474, 166);
+            this.f4.Name = "f4";
+            this.f4.Size = new System.Drawing.Size(80, 20);
+            this.f4.TabIndex = 24;
+            // 
+            // f5
+            // 
+            this.f5.Location = new System.Drawing.Point(474, 192);
+            this.f5.Name = "f5";
+            this.f5.Size = new System.Drawing.Size(80, 20);
+            this.f5.TabIndex = 30;
+            // 
+            // gaussPanel
+            // 
+            this.gaussPanel.Location = new System.Drawing.Point(311, 221);
+            this.gaussPanel.Name = "gaussPanel";
+            this.gaussPanel.Size = new System.Drawing.Size(244, 23);
+            this.gaussPanel.TabIndex = 4;
+            this.gaussPanel.Text = "Gauss-Seidel";
+            this.gaussPanel.UseVisualStyleBackColor = true;
+            this.gaussPanel.Click += new System.EventHandler(this.gaussPanel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 379);
             this.Controls.Add(this.welcomeScreen);
-            this.Controls.Add(this.newton);
             this.Controls.Add(this.conics);
+            this.Controls.Add(this.gauss);
+            this.Controls.Add(this.newton);
             this.Controls.Add(this.numberSorting);
             this.Controls.Add(this.converter);
             this.Controls.Add(this.tribonacci);
@@ -1583,6 +1947,8 @@
             this.newton.ResumeLayout(false);
             this.newton.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radix)).EndInit();
+            this.gauss.ResumeLayout(false);
+            this.gauss.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1741,6 +2107,44 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel gauss;
+        private System.Windows.Forms.TextBox textBox101;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        public System.Windows.Forms.TextBox textBoxF1;
+        public System.Windows.Forms.TextBox textBoxE1;
+        public System.Windows.Forms.TextBox textBoxD1;
+        public System.Windows.Forms.TextBox textBoxC1;
+        public System.Windows.Forms.TextBox textBoxB1;
+        public System.Windows.Forms.TextBox textBoxA1;
+        public System.Windows.Forms.RichTextBox outputValues;
+        private System.Windows.Forms.Button clearValues;
+        public System.Windows.Forms.TextBox f5;
+        public System.Windows.Forms.TextBox textBoxF3;
+        public System.Windows.Forms.TextBox f4;
+        public System.Windows.Forms.TextBox textBoxF2;
+        public System.Windows.Forms.TextBox e5;
+        public System.Windows.Forms.TextBox textBoxE3;
+        public System.Windows.Forms.TextBox e4;
+        public System.Windows.Forms.TextBox textBoxE2;
+        public System.Windows.Forms.TextBox d5;
+        public System.Windows.Forms.TextBox textBoxD3;
+        public System.Windows.Forms.TextBox d4;
+        public System.Windows.Forms.TextBox textBoxD2;
+        public System.Windows.Forms.TextBox c5;
+        public System.Windows.Forms.TextBox textBoxC3;
+        public System.Windows.Forms.TextBox c4;
+        public System.Windows.Forms.TextBox textBoxC2;
+        public System.Windows.Forms.TextBox b5;
+        public System.Windows.Forms.TextBox textBoxB3;
+        public System.Windows.Forms.TextBox a5;
+        public System.Windows.Forms.TextBox textBoxA3;
+        public System.Windows.Forms.TextBox b4;
+        public System.Windows.Forms.TextBox textBoxB2;
+        public System.Windows.Forms.TextBox a4;
+        public System.Windows.Forms.TextBox textBoxA2;
+        private System.Windows.Forms.Button gaussPanel;
     }
 }
 

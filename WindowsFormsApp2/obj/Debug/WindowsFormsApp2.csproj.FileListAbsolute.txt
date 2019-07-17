@@ -25,3 +25,12 @@ C:\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\Window
 \\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
 \\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 \\LAPTOP-PC\Users\Michael\Downloads\pc\Number Converter\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojResolveAssemblyReference.cache
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\Michael\Downloads\csharp-portfolio\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
