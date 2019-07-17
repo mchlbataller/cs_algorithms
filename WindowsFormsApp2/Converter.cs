@@ -10,31 +10,50 @@ namespace WindowsFormsApp2
     class Converter
     {
         public int i;
-        public int dec;    // dec
+        public int dec;    // decimal
         public int bas;    // base
         public int temp;
         public int[] converted = new int[100];
 
 
-        public Converter()
-        {
-            i = 0;
-        }
-
-        public void converterProcess(RichTextBox numOutput,
-            int dec, int bas, int[] converted, int i, int temp)
+        public void Start(RichTextBox numOutput, int dec, int bas, int[] converted, int i, int temp)
         {
             i = 1;
-            numOutput.AppendText("Number " + temp
-                + " with base-10 to base-" + bas + " is equal to: ");
+            
+            int checkErrors = conditions(numOutput, dec, bas, converted, i, temp);
 
-            //			===============	ENTERING CONVERSION PROCESS	=================			//
-            //                       ===== INITIAL CONDITIONS START =====             //
+            if (checkErrors == 0) // No errors.
+            {
+                numOutput.AppendText("Number " + temp
+                    + " with base-10 to base-" + bas + " is equal to: ");
+                converter(numOutput, dec, bas, converted, i, temp);
+            } else if (checkErrors == 1)   //Invalid base
+            {
+                numOutput.AppendText("Your selected base is invalid. Please try again. \r\n");
+            } else if (checkErrors == 2) // Unary numeral system
+            {
+                numOutput.Clear();
+                numOutput.AppendText("Food for thought:" + Environment.NewLine + "The unary numeral system is the bijective base-1 numeral system. It is the simplest numeral system to represent natural numbers: in order to represent a number N, an arbitrarily chosen symbol representing 1 is repeated N times. This system is used in tallying. For example, using the tally mark |, the number 6 is represented as ||||||." + Environment.NewLine);
+                numOutput.AppendText("TL;DR: The base you selected is invalid since it is only used for tallying.");
+            } else if (checkErrors == 3)
+            {
+                numOutput.AppendText("The input number is invalid.");
+            }
+
+
+        }
+
+        private int conditions(RichTextBox numOutput, int dec, int bas, int[] converted, int i, int temp)
+        {
             if (bas == 0)
             {
-                numOutput.AppendText("Your output is invalid. Please try again.\n\n");
-                return;     // return was used to terminate
+                return 1;     // return was used to terminate
             }
+            else if (bas == 1)
+            {
+                return 2;
+            }
+
             //	If binary...
             if (bas == 2)
             {
@@ -42,23 +61,31 @@ namespace WindowsFormsApp2
                 {
                     numOutput.AppendText("0");
                 }
-                else       // if dec is negative....
+                // if dec is negative....
+                else
                 {
                     numOutput.AppendText("1");
                     dec = Math.Abs(dec);
                 };
             };
+
+
+            if (dec > 0 && bas > 36)
+            {
+                return 3;
+            }
+            return 0;
+        }
+
+
+
+        private void converter(RichTextBox numOutput, int dec, int bas, int[] converted, int i, int temp) {
+
             if (dec < 0 && bas > 0)
             {
                 numOutput.AppendText("-");
                 dec *= -1;
             }
-            if (dec > 0 && bas > 36)
-            {
-                numOutput.AppendText("The input is invalid");
-                return;
-            }
-            //          ===== INITIAL CONDITIONS END =====           //
             for (;;)
             {
                 converted[i] = dec % bas;
@@ -72,7 +99,7 @@ namespace WindowsFormsApp2
                 }
             }
 
-            i--;    // Required for the sake of correction.
+            i--;    // If the proceeding number exceeds, reduce the counter.
 
 
             while (i > 0)
@@ -166,6 +193,6 @@ namespace WindowsFormsApp2
             }
             numOutput.AppendText("\r\n");
             return;
-        }
+        } 
     }
 }

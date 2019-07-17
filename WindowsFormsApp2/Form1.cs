@@ -19,10 +19,19 @@ namespace WindowsFormsApp2
         private int discriminant;
 
 
+        // Array has been pre-declared since the programmer has no idea how to do it without
+        // encountering any errors.
+        public int[] numbers1 = new int[25] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public int[] numbers2 = new int[25] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public int[] numbers3 = new int[25] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+        //Initialize form
         public Form1()
         {
             InitializeComponent();
         }
+
+
 
         public void submitNumber_Click(object sender, EventArgs e)
         {
@@ -30,12 +39,9 @@ namespace WindowsFormsApp2
 
             // convert input texts
 			//
-            c.dec = Convert.ToInt32(numInput.Text);
-            c.bas = Convert.ToInt32(baseSelector.Text);
-            c.temp = c.dec;             // assigning decimal to temp for future use
+            c.temp = Convert.ToInt32(numInput.Text);
 
-            c.converterProcess(numOutput, c.dec, c.bas, c.converted, c.i, c.temp);          // first arg is about passing a reference to the converterProcess 
-                                                                                            // so that the method can actually modify the object.
+            c.Start(numOutput, Convert.ToInt32(numInput.Text), Convert.ToInt32(baseSelector.Text), c.converted, c.i, c.temp);   
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,17 +59,7 @@ namespace WindowsFormsApp2
         {
 
         }
-
-
-            // Array has been pre-declared since the programmer has no idea how to do it without
-            // encountering any errors.
-            public int[] numbers1 = new int[25] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            public int[] numbers2 = new int[25] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            public int[] numbers3 = new int[25] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-
-
-        int counter;
-
+        
         // Event Handler for the Enter key to be assigned to the array
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -138,9 +134,7 @@ namespace WindowsFormsApp2
             numberSorting.BringToFront();
         }
 
-        private void debug_Click(object sender, EventArgs e)
-        {
-        }
+
 
         private void matrixSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -148,10 +142,6 @@ namespace WindowsFormsApp2
             {
                 case "2": matrix2.Visible = true; break;
             }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
         }
 
         private void proceed_Click(object sender, EventArgs e)
