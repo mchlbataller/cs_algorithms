@@ -168,6 +168,18 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.newtonPanel = new System.Windows.Forms.Button();
+            this.newton = new System.Windows.Forms.Panel();
+            this.number = new System.Windows.Forms.TextBox();
+            this.radix = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.output = new System.Windows.Forms.RichTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.converter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baseSelector)).BeginInit();
             this.tribonacci.SuspendLayout();
@@ -180,6 +192,8 @@
             this.matrix4.SuspendLayout();
             this.matrix3.SuspendLayout();
             this.conics.SuspendLayout();
+            this.newton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radix)).BeginInit();
             this.SuspendLayout();
             // 
             // converter
@@ -443,6 +457,10 @@
             // 
             // welcomeScreen
             // 
+            this.welcomeScreen.BackColor = System.Drawing.Color.CadetBlue;
+            this.welcomeScreen.Controls.Add(this.label17);
+            this.welcomeScreen.Controls.Add(this.label16);
+            this.welcomeScreen.Controls.Add(this.newtonPanel);
             this.welcomeScreen.Controls.Add(this.conicsButton);
             this.welcomeScreen.Controls.Add(this.debug);
             this.welcomeScreen.Controls.Add(this.button4);
@@ -455,7 +473,7 @@
             // 
             // conicsButton
             // 
-            this.conicsButton.Location = new System.Drawing.Point(172, 217);
+            this.conicsButton.Location = new System.Drawing.Point(172, 245);
             this.conicsButton.Name = "conicsButton";
             this.conicsButton.Size = new System.Drawing.Size(244, 23);
             this.conicsButton.TabIndex = 4;
@@ -465,7 +483,7 @@
             // 
             // debug
             // 
-            this.debug.Location = new System.Drawing.Point(461, 285);
+            this.debug.Location = new System.Drawing.Point(462, 337);
             this.debug.Name = "debug";
             this.debug.Size = new System.Drawing.Size(115, 23);
             this.debug.TabIndex = 3;
@@ -475,17 +493,17 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(172, 171);
+            this.button4.Location = new System.Drawing.Point(172, 204);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(244, 23);
             this.button4.TabIndex = 2;
-            this.button4.Text = "Number Sorter";
+            this.button4.Text = "*Number Sorter";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(172, 128);
+            this.button3.Location = new System.Drawing.Point(172, 161);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(244, 23);
             this.button3.TabIndex = 1;
@@ -495,7 +513,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(172, 74);
+            this.button2.Location = new System.Drawing.Point(172, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 23);
             this.button2.TabIndex = 0;
@@ -1399,19 +1417,146 @@
             this.textBox11.TabIndex = 0;
             this.textBox11.Text = "A";
             // 
+            // newtonPanel
+            // 
+            this.newtonPanel.Location = new System.Drawing.Point(172, 284);
+            this.newtonPanel.Name = "newtonPanel";
+            this.newtonPanel.Size = new System.Drawing.Size(244, 23);
+            this.newtonPanel.TabIndex = 4;
+            this.newtonPanel.Text = "Newton Raphson";
+            this.newtonPanel.UseVisualStyleBackColor = true;
+            this.newtonPanel.Click += new System.EventHandler(this.newtonPanel_Click);
+            // 
+            // newton
+            // 
+            this.newton.Controls.Add(this.button5);
+            this.newton.Controls.Add(this.output);
+            this.newton.Controls.Add(this.label14);
+            this.newton.Controls.Add(this.label13);
+            this.newton.Controls.Add(this.label15);
+            this.newton.Controls.Add(this.label12);
+            this.newton.Controls.Add(this.radix);
+            this.newton.Controls.Add(this.number);
+            this.newton.Location = new System.Drawing.Point(0, 0);
+            this.newton.Name = "newton";
+            this.newton.Size = new System.Drawing.Size(598, 380);
+            this.newton.TabIndex = 19;
+            // 
+            // number
+            // 
+            this.number.Location = new System.Drawing.Point(252, 100);
+            this.number.Name = "number";
+            this.number.Size = new System.Drawing.Size(159, 20);
+            this.number.TabIndex = 0;
+            // 
+            // radix
+            // 
+            this.radix.Location = new System.Drawing.Point(252, 135);
+            this.radix.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.radix.Name = "radix";
+            this.radix.Size = new System.Drawing.Size(120, 20);
+            this.radix.TabIndex = 1;
+            this.radix.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(187, 103);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 13);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Number:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(187, 138);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(36, 13);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Label:";
+            // 
+            // output
+            // 
+            this.output.Location = new System.Drawing.Point(56, 240);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(474, 96);
+            this.output.TabIndex = 3;
+            this.output.Text = "";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(53, 214);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(84, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Program Output:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(245, 62);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(90, 13);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Newton Raphson";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(252, 164);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Submit";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Light", 20F);
+            this.label16.ForeColor = System.Drawing.SystemColors.Control;
+            this.label16.Location = new System.Drawing.Point(19, 25);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(308, 37);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Welcome to our program.";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label17.ForeColor = System.Drawing.SystemColors.Control;
+            this.label17.Location = new System.Drawing.Point(22, 68);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(325, 19);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Please select the sub-program you want to execute.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 379);
-            this.Controls.Add(this.conics);
             this.Controls.Add(this.welcomeScreen);
+            this.Controls.Add(this.newton);
+            this.Controls.Add(this.conics);
             this.Controls.Add(this.numberSorting);
             this.Controls.Add(this.converter);
             this.Controls.Add(this.tribonacci);
             this.Controls.Add(this.determinants);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "C# Portfolio";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.converter.ResumeLayout(false);
             this.converter.PerformLayout();
@@ -1421,6 +1566,7 @@
             this.numberSorting.ResumeLayout(false);
             this.numberSorting.PerformLayout();
             this.welcomeScreen.ResumeLayout(false);
+            this.welcomeScreen.PerformLayout();
             this.determinants.ResumeLayout(false);
             this.matrix6.ResumeLayout(false);
             this.matrix6.PerformLayout();
@@ -1434,6 +1580,9 @@
             this.matrix3.PerformLayout();
             this.conics.ResumeLayout(false);
             this.conics.PerformLayout();
+            this.newton.ResumeLayout(false);
+            this.newton.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radix)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1580,6 +1729,18 @@
         private System.Windows.Forms.Button proceed;
         private System.Windows.Forms.TextBox textBox98;
         private System.Windows.Forms.Button conicsButton;
+        private System.Windows.Forms.Panel newton;
+        private System.Windows.Forms.RichTextBox output;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown radix;
+        private System.Windows.Forms.TextBox number;
+        private System.Windows.Forms.Button newtonPanel;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }
 

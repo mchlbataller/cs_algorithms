@@ -3,39 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    class Newton_Raphson { }
-    //{
-    //    public static String f(double x)
-    //    {
-    //        return (x * x) + (2 * x) + 1;
-    //    }
+    class NewtonRaphson
+    {
+        public static double Sqrt(double x, int y)
+        {
+            double z = x;
+            double w = 1;
+            double e = 0.000001;
+            while (z - w > e)
+            {
+                z = ((y - 1) * z + w) / y;
+                w = x / Math.Pow(z, (y - 1));
+            }
+            return z;
+        }
 
-    //    public static Double g(double x)
-    //    {
-    //        return (2 * x) + 2;
-    //    }
+        public static void Start(RichTextBox output, double num, int rad)
+        {
+            if (rad == 1)
+            {
+                output.AppendText($"The 1st root of {num} is {num}" + Environment.NewLine);
+            }
+            else if (rad == 2)
+            {
+                output.AppendText($"The square root of {num} is {NewtonRaphson.Sqrt(num, rad)}" + Environment.NewLine);
+            }
+            else if (rad == 3)
+            {
+                output.AppendText($"The third root of {num} is {NewtonRaphson.Sqrt(num, rad)}" + Environment.NewLine);
+            }
+            else
+            {
+                output.AppendText($"The {rad}th root of {num} is {NewtonRaphson.Sqrt(num, rad)}" + Environment.NewLine);
+            }
+        }
 
-    //    public static String NewtonRaphson(double x_0, double precision)
-    //    {
-    //        double x = x_0;
-    //        while (f(x) > precision)
-    //        {
-    //            x = x - (f(x) / g(x));
-    //            if (f(x) <= precision)
-    //            {
-    //                return x + "";
-    //            }
-    //        }
-    //        return "";
-    //    }
 
-    //    static void Main(string[] args)
-    //    {
-    //        Console.WriteLine("The approximate root of r = " + NewtonRaphson(0, 1e-10));
-    //        Console.ReadKey();
-    //    }
+    }
 }
 

@@ -138,8 +138,7 @@ namespace WindowsFormsApp2
             }
             catch
             {
-
-                // if error occurs, the program will terminate
+                // Terminate the program once input is invalid.
                 MessageBox.Show("Input must be integer! \n Program Terminating.......");
                 this.Close();
             }
@@ -195,10 +194,19 @@ namespace WindowsFormsApp2
 
         private void debug_Click(object sender, EventArgs e)
         {
-            TestClass t = new TestClass();
+        }
 
-            t.a = 1;
-            t.output();
+        private void newtonPanel_Click(object sender, EventArgs e)
+        {
+            newton.BringToFront();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            double num = Convert.ToInt32(number.Text);
+            int rad = Convert.ToInt32(radix.Text);
+
+            NewtonRaphson.Start(output, num, rad);
         }
     }
 }
