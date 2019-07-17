@@ -3,13 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    class Conics
+    class Conics : Form1
     {
+        public int a, b, c, d, f, g, bSquare, discriminant;
+        //public int a { get; set; }
+        //public int b { get; set; }
+        //public int c { get; set; }
+        //public int d { get; set; }
+        //public int f { get; set; }
+        //public int g { get; set; }
+        //public int bSquare { get; set; }
+        //public int discriminant { get; set; }
+
+
+
         // nested methods for conic outputs
-        void circleOutput()
+        public void circleOutput()
         {
             double r, x, y, h, k, ga, radius;
 
@@ -26,7 +39,7 @@ namespace WindowsFormsApp2
             MessageBox.Show($"The conic section is circle\nThe radius is {radius}. \n Vertex at ({h}, {k})");
 
         }
-        void parabolaVerticalOutput()
+        public void parabolaVerticalOutput()
         {
             double x, y, h, k, focus;
             string upWard, downWard;
@@ -52,7 +65,7 @@ namespace WindowsFormsApp2
 
         }
 
-        void parabolaHorizontalOutput()
+        public void parabolaHorizontalOutput()
         {
             double x, y, h, k, focus;
             string upWard, downWard;
@@ -78,7 +91,7 @@ namespace WindowsFormsApp2
 
         }
 
-        void ellipseOutput()
+        public void ellipseOutput()
         {
             double h, k, semiAxesA, semiAxesB;
 
@@ -92,7 +105,9 @@ namespace WindowsFormsApp2
 
             MessageBox.Show($"The conic section is Ellipse. \nThe semi-axes are  a = {semiAxesA} and b {semiAxesB} . \n Vertex at ({h}, {k}).");
         }
-        void hyperbolaOutput() // standard hyperbola
+
+
+        public void hyperbolaOutput() // standard hyperbola
         {
             double x, asymptotes;
 
@@ -102,8 +117,5 @@ namespace WindowsFormsApp2
 
             MessageBox.Show($"The conic section is Hyperbola \n The horizontal asymptote is {asymptotes}.");
         }
-
-
     }
-}
 }

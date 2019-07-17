@@ -159,7 +159,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.matrixSelector = new System.Windows.Forms.ComboBox();
             this.conics = new System.Windows.Forms.Panel();
-            this.outputNumber = new System.Windows.Forms.TextBox();
             this.textBox98 = new System.Windows.Forms.TextBox();
             this.clear = new System.Windows.Forms.Button();
             this.proceed = new System.Windows.Forms.Button();
@@ -389,6 +388,7 @@
             this.executeSorting.TabIndex = 13;
             this.executeSorting.Text = "Submit";
             this.executeSorting.UseVisualStyleBackColor = true;
+            this.executeSorting.Click += new System.EventHandler(this.executeSorting_Click);
             // 
             // rt3
             // 
@@ -439,7 +439,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(204, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // welcomeScreen
@@ -472,6 +471,7 @@
             this.debug.TabIndex = 3;
             this.debug.Text = "Dev Mode";
             this.debug.UseVisualStyleBackColor = true;
+            this.debug.Click += new System.EventHandler(this.debug_Click);
             // 
             // button4
             // 
@@ -1305,7 +1305,6 @@
             // 
             // conics
             // 
-            this.conics.Controls.Add(this.outputNumber);
             this.conics.Controls.Add(this.textBox98);
             this.conics.Controls.Add(this.clear);
             this.conics.Controls.Add(this.proceed);
@@ -1320,29 +1319,21 @@
             this.conics.Size = new System.Drawing.Size(598, 377);
             this.conics.TabIndex = 19;
             // 
-            // outputNumber
-            // 
-            this.outputNumber.Location = new System.Drawing.Point(53, 184);
-            this.outputNumber.Multiline = true;
-            this.outputNumber.Name = "outputNumber";
-            this.outputNumber.Size = new System.Drawing.Size(508, 176);
-            this.outputNumber.TabIndex = 9;
-            // 
             // textBox98
             // 
             this.textBox98.BackColor = System.Drawing.SystemColors.Control;
             this.textBox98.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox98.Location = new System.Drawing.Point(60, 62);
+            this.textBox98.Location = new System.Drawing.Point(53, 145);
             this.textBox98.Name = "textBox98";
             this.textBox98.ReadOnly = true;
             this.textBox98.Size = new System.Drawing.Size(490, 13);
             this.textBox98.TabIndex = 8;
-            this.textBox98.Text = "Ax^2 + Bxy +Cy^2 + Dx + Ey + F = 0";
+            this.textBox98.Text = "General Formula: Ax^2 + Bxy +Cy^2 + Dx + Ey + F = 0";
             this.textBox98.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // clear
             // 
-            this.clear.Location = new System.Drawing.Point(374, 131);
+            this.clear.Location = new System.Drawing.Point(376, 217);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 23);
             this.clear.TabIndex = 7;
@@ -1352,7 +1343,7 @@
             // 
             // proceed
             // 
-            this.proceed.Location = new System.Drawing.Point(171, 130);
+            this.proceed.Location = new System.Drawing.Point(173, 216);
             this.proceed.Name = "proceed";
             this.proceed.Size = new System.Drawing.Size(75, 23);
             this.proceed.TabIndex = 6;
@@ -1362,57 +1353,63 @@
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(481, 88);
+            this.textBox17.Location = new System.Drawing.Point(483, 174);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(80, 20);
             this.textBox17.TabIndex = 5;
+            this.textBox17.Text = "F";
             // 
             // textBox97
             // 
-            this.textBox97.Location = new System.Drawing.Point(395, 88);
+            this.textBox97.Location = new System.Drawing.Point(397, 174);
             this.textBox97.Name = "textBox97";
             this.textBox97.Size = new System.Drawing.Size(80, 20);
             this.textBox97.TabIndex = 4;
+            this.textBox97.Text = "E";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(309, 88);
+            this.textBox14.Location = new System.Drawing.Point(311, 174);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(80, 20);
             this.textBox14.TabIndex = 3;
+            this.textBox14.Text = "D";
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(223, 88);
+            this.textBox13.Location = new System.Drawing.Point(225, 174);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(80, 20);
             this.textBox13.TabIndex = 2;
+            this.textBox13.Text = "C";
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(137, 88);
+            this.textBox12.Location = new System.Drawing.Point(139, 174);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(80, 20);
             this.textBox12.TabIndex = 1;
+            this.textBox12.Text = "B";
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(51, 88);
+            this.textBox11.Location = new System.Drawing.Point(53, 174);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(80, 20);
             this.textBox11.TabIndex = 0;
+            this.textBox11.Text = "A";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 379);
-            this.Controls.Add(this.converter);
+            this.Controls.Add(this.conics);
             this.Controls.Add(this.welcomeScreen);
             this.Controls.Add(this.numberSorting);
+            this.Controls.Add(this.converter);
             this.Controls.Add(this.tribonacci);
             this.Controls.Add(this.determinants);
-            this.Controls.Add(this.conics);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1583,7 +1580,6 @@
         private System.Windows.Forms.Button proceed;
         private System.Windows.Forms.TextBox textBox98;
         private System.Windows.Forms.Button conicsButton;
-        private System.Windows.Forms.TextBox outputNumber;
     }
 }
 

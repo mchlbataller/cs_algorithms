@@ -14,9 +14,6 @@ namespace WindowsFormsApp2
     public partial class Form1 : Form
     {
         private int i = 0;
-        private int a, b, c, d, f, g;
-        private int bSquare = 0;
-        private int discriminant;
 
 
         // Array has been pre-declared since the programmer has no idea how to do it without
@@ -79,26 +76,13 @@ namespace WindowsFormsApp2
 
                 Debug.WriteLine(s.counter);
 
-                // These lines of codes are used by the programmer during debugging process.
-                // debug start
-                //Debug.WriteLine("");
-                //Debug.WriteLine($"{i - 1}");
-                //for (int j = 0; j < 24; j++)
-                //{
-                //    Debug.Write(numbers1[j]);
-                //}
-                // debug end
-
 
                 // clearing the textbox...
                 textBox1.Text = "";
 
             }
 
-
-            // TO BE DELETED
-            // Call the function when i has reached the max
-            // array index value
+            // Calls the sorting functions when the input reaches the max index array
             if (i == 25)
             {
                 s.BubbleSort(numbers1);
@@ -116,9 +100,6 @@ namespace WindowsFormsApp2
             }
         }
 
-
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             converter.BringToFront();
@@ -134,8 +115,6 @@ namespace WindowsFormsApp2
             numberSorting.BringToFront();
         }
 
-
-
         private void matrixSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch(matrixSelector.Text)
@@ -146,16 +125,16 @@ namespace WindowsFormsApp2
 
         private void proceed_Click(object sender, EventArgs e)
         {
+            Conics c = new Conics();
             try
             {
                 // getting the user's input
-                a = int.Parse(textBox11.Text);
-                b = int.Parse(textBox12.Text);
-                c = int.Parse(textBox13.Text);
-                d = int.Parse(textBox14.Text);
-                f = int.Parse(textBox97.Text);
-                g = int.Parse(textBox17.Text);
-
+                c.a = int.Parse(textBox11.Text);
+                c.b = int.Parse(textBox12.Text);
+                c.c = int.Parse(textBox13.Text);
+                c.d = int.Parse(textBox14.Text);
+                c.f = int.Parse(textBox97.Text);
+                c.g = int.Parse(textBox17.Text);
             }
             catch
             {
@@ -167,45 +146,41 @@ namespace WindowsFormsApp2
             finally
             {
                 // determining the conic section using the value from the discriminant formula
-                bSquare = b * b;
-                discriminant = bSquare - (4) * (a) * (c);
+                c.bSquare = c.b * c.b;
+                c.discriminant = c.bSquare - (4) * (c.a) * (c.c);
 
-                if (a == c && b == 0) // circle
+                if (c.a == c.c && c.b == 0) // circle
                 {
-                    circleOutput();
+                    c.circleOutput();
+                }
+                else if (c.discriminant == 0 && c.b == 0 && c.c == 0) // vertical parabola
+                {
+                    c.parabolaVerticalOutput();
+                }
+                else if (c.discriminant == 0 && c.a == 0 && c.b == 0) // horizontal parabola
+                {
+                    c.parabolaHorizontalOutput();
+                }
 
-                }
-                else if (discriminant == 0 && b == 0 && c == 0) // vertical parabola
+                else if (c.discriminant < 0) // ellipse
                 {
-                    parabolaVerticalOutput();
+                    c.ellipseOutput();
                 }
-                else if (discriminant == 0 && a == 0 && b == 0) // horizontal parabola
+                else if (c.discriminant > 0) // hyperbola
                 {
-                    parabolaHorizontalOutput();
-                }
-
-                else if (discriminant < 0) // ellipse
-                {
-                    ellipseOutput();
-                }
-                else if (discriminant > 0) // hyperbola
-                {
-                    hyperbolaOutput();
-
+                    c.hyperbolaOutput();
                 }
 
             }
         }
-
         private void clear_Click(object sender, EventArgs e)
         {
-
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
+            textBox11.Clear();
+            textBox12.Clear();
+            textBox13.Clear();
+            textBox14.Clear();
+            textBox97.Clear();
+            textBox17.Clear();
         }
 
         private void conicsButton_Click(object sender, EventArgs e)
@@ -213,102 +188,17 @@ namespace WindowsFormsApp2
             conics.BringToFront();
         }
 
-        // nested methods for conic outputs
-        private void circleOutput()
+        private void executeSorting_Click(object sender, EventArgs e)
         {
-            double r, x, y, h, k, ga, radius;
-
-            x = d / (2 * a);
-            y = f / (2 * a);
-            r = (x * x) + (y * y);
-
-            h = -(x); // vertex at h
-            k = -(y); // vertex at k
-
-            ga = g / a;
-            radius = Math.Sqrt(r - ga);
-
-            outputNumber.AppendText($"The conic section is circle\nThe radius is {radius}. \n Vertex at ({h}, {k})");
-
-        }
-        private void parabolaVerticalOutput()
-        {
-            double x, y, h, k, focus;
-            string upWard, downWard;
-
-            x = d / (2 * a);
-            y = (d * d) / 4;
-
-            h = -(x); // vertex at h
-            k = (y - g) / f; // vertex at k
-
-            focus = 4 / a;
-
-            if (focus > 0)
-            {
-                upWard = "upwards";
-                outputNumber.AppendText($"The conic section is Vertical Parabola\nThe focus is {focus}. \n Vertex at ({h}, {k}) opening {upWard}");
-            }
-            else
-            {
-                downWard = "downwards";
-                outputNumber.AppendText($"The conic section is Vertical Parabola\nThe focus is {focus}. \n Vertex at ({h}, {k}) opening {downWard}");
-            }
 
         }
 
-        private void parabolaHorizontalOutput()
+        private void debug_Click(object sender, EventArgs e)
         {
-            double x, y, h, k, focus;
-            string upWard, downWard;
+            TestClass t = new TestClass();
 
-            x = f / (2 * c);
-            y = (f * f) / 4;
-
-
-            focus = 4 / c;
-            h = (y - g) / d; // vertex at h
-            k = -(x); // vertex at k
-
-            if (focus > 0)
-            {
-                upWard = "upwards";
-                outputNumber.AppendText($"The conic section is Horizontal Parabola\nThe focus is {focus}. \n Vertex at ({h}, {k}) opening {upWard}");
-            }
-            else
-            {
-                downWard = "downwards";
-                outputNumber.AppendText($"The conic section is Horizontal Parabola\nThe focus is {focus}. \n Vertex at ({h}, {k}) opening {downWard}");
-            }
-
+            t.a = 1;
+            t.output();
         }
-
-        private void ellipseOutput()
-        {
-            double h, k, semiAxesA, semiAxesB;
-
-
-            h = -d / (2 * a); // vertex at h
-            k = -f / 2; // vertex at k
-
-
-            semiAxesA = Math.Sqrt(c);
-            semiAxesB = Math.Sqrt(1);
-
-            outputNumber.AppendText($"The conic section is Ellipse. \nThe semi-axes are  a = {semiAxesA} and b {semiAxesB} . \n Vertex at ({h}, {k}).");
-        }
-
-
-        private void hyperbolaOutput() // standard hyperbola
-        {
-            double x, asymptotes;
-
-            x = -d / (2 * a);
-
-            asymptotes = Math.Abs(b / a) * x;
-
-            outputNumber.AppendText($"The conic section is Hyperbola \n The horizontal asymptote is {asymptotes}.");
-        }
-
     }
 }
